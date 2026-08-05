@@ -31,7 +31,7 @@ guard :minitest, all_on_start: false do
   end
 
   watch(%r{^app/views/([^/]*?)/.*\.html\.erb$}) do |matches|
-    ["test/controllers/#{matches[1]}_controller_test.rb"] +
+    [ "test/controllers/#{matches[1]}_controller_test.rb" ] +
       integration_tests(matches[1])
   end
 
@@ -60,7 +60,7 @@ guard :minitest, all_on_start: false do
 
   watch(%r{app/views/users/*}) do
     resource_tests("users") +
-      ["test/integration/microposts_interface_test.rb"]
+      [ "test/integration/microposts_interface_test.rb" ]
   end
 
   watch("app/controllers/relationships_controller.rb") do
