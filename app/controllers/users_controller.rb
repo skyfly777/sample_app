@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    #debugger
+    # debugger
   end
 
   def create
@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      reset_session
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
@@ -30,8 +32,4 @@ class UsersController < ApplicationController
       :password_confirmation
     )
   end
-
-
-
 end
-
