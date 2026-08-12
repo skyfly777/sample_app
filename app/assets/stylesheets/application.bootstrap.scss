@@ -175,18 +175,17 @@ $gray-medium-light: #eaeaea;
 
 /* forms */
 
-input,
+input:not([type="checkbox"]),
 textarea,
 select,
 .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-
   @include box_sizing;
 }
 
-input {
+input:not([type="checkbox"]) {
   height: auto !important;
 }
 
