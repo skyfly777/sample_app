@@ -21,6 +21,12 @@ gem "jbuilder"
 
 gem "bcrypt"
 
+gem "faker"
+
+gem "will_paginate"
+# gem "bootstrap-will_paginate"  #zastarelo, radi bez
+
+
 # gem "sassc-rails"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
