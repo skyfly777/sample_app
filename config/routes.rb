@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "sessions/new"
   resources :users
+  resources :account_activations, only: [ :edit ]
 
   get "/signup", to: "users#new"
   get "/help", to: "static_pages#help"
